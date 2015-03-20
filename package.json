@@ -5,6 +5,7 @@
   "author": "danielcwarshaw@gmail.com",
   "description": "Stuffs!",
   "dependencies": {
+    "coffee-script": "^1.9.1",
     "hubot": "^2.11.4",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.1.4",
