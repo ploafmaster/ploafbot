@@ -104,3 +104,12 @@ module.exports = (robot) ->
   # robot.respond /sleep it off/i, (msg) ->
   #   robot.brain.set 'totalSodas', 0
   #   robot.respond 'zzzzz'
+  #
+  # Here's a little play on the XKCD strip.
+   robot.hear /make me a sandwich/i, (msg) ->
+     msg.send "What? Make it yourself."
+
+
+   robot.hear /sudo ploafbot make me a sandwich/, (msg) ->
+     msg.send "Okay."
+     msg.emote "makes a sandwich"
