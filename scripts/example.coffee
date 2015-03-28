@@ -108,8 +108,8 @@ module.exports = (robot) ->
   # Here's a little play on the XKCD strip.
    robot.hear /make me a sandwich/i, (msg) ->
      msg.send "What? Make it yourself."
-
-
-   robot.hear /sudo ploafbot make me a sandwich/, (msg) ->
+  #
+  # And here's the response if you take it all the way.
+   robot.hear /sudo ploafbot make me a sandwich/i, (msg) ->
      msg.send "Okay."
-     msg.emote "makes a sandwich"
+     msg.emote "makes a sandwich."
