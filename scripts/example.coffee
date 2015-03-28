@@ -106,10 +106,11 @@ module.exports = (robot) ->
   #   robot.respond 'zzzzz'
   #
   # Here's a little play on the XKCD strip.
-   robot.hear /make me a sandwich/i, (msg) ->
-     msg.send "What? Make it yourself."
-  #
-  # And here's the response if you take it all the way.
-   robot.hear /sudo ploafbot make me a sandwich/i, (msg) ->
-     msg.send "Okay."
-     msg.emote "makes a sandwich."
+   robot.hear /(^.*).*make me a sandwich.*/i, (msg) ->
+     godMode = msg.match[1]
+     if godMode is "sudo" 
+       msg.reply "Okay."
+       msg.emote "makes a sandwich."
+     else
+       msg.reply "What? Make it yourself."
+
