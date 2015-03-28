@@ -106,7 +106,7 @@ module.exports = (robot) ->
   #   robot.respond 'zzzzz'
   #
   # Here's a little play on the XKCD strip.
-   robot.hear /(^.*).*make me a sandwich.*/i, (msg) ->
+   robot.hear /(^[a-z]+).*make me a sandwich.*/i, (msg) ->
      godMode = msg.match[1]
      if godMode is "sudo" 
        msg.reply "Okay."
