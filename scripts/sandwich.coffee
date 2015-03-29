@@ -4,11 +4,11 @@
 #
 module.exports = (robot) ->
 #
-   robot.hear /(^[a-z]+).*make me a sandwich.*/i, (msg) ->
+   robot.hear /(^[a-z]+)? ?make me a sandwich.*/i, (msg) ->
      godMode = msg.match[1]
      if godMode is "sudo" 
        msg.reply "Okay."
-       msg.emote "makes a sandwich."
+       msg.emote "_makes a sandwich_"
      else
        msg.reply "What? Make it yourself."
 
