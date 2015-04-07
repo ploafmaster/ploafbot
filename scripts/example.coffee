@@ -23,19 +23,6 @@ module.exports = (robot) ->
    robot.hear /I like pie/i, (msg) ->
      msg.emote "makes a freshly baked pie"
 
-  robot.hear /Tell me what it's about/i, (msg) ->
-    nouns = ["ethics", "recipes", "cars", "tofu", "elk", "hats", "tampons", "commercials", "smartphones", "democracy"]
-    modifiers = ["game", "sports", "fancy", "tyrannic", "ancient", "artisanal", "botanical", "feminine", "masculine", "educational"]
-    objects = ["journalism", "media", "film criticism", "dungeons and dragons", "sandwiches", "poop", "venture capital", "capitalism", "astrophysics", "fashion", "industries"]
-    
-    randomElementFrom = (arr) ->
-      arr[Math.floor(Math.random() * arr.length)]
-    
-    randomNoun = randomElementFrom nouns
-    randomMod = randomElementFrom modifiers
-    randomObj = randomElementFrom objects
-    
-    msg.send "Actually, it's about #{randomNoun} in #{randomMod} #{randomObj}."
   #
   # lulz = ['lol', 'rofl', 'lmao']
   #
